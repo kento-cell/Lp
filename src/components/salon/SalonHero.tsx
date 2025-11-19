@@ -1,6 +1,8 @@
+import { Clock3, Instagram, ShieldCheck, Sparkles, Star } from "lucide-react";
+import Link from "next/link";
+
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { Button } from "../ui/button";
-import { Clock3, Instagram, ShieldCheck, Sparkles, Star } from "lucide-react";
 
 const stats = [
   { label: "年間リピート", value: "92%" },
@@ -44,8 +46,9 @@ export function SalonHero() {
               <Button
                 size="lg"
                 className="min-w-[220px] bg-white text-neutral-900 hover:bg-white/90 text-base font-semibold px-8 py-6 shadow-2xl shadow-rose-500/30"
+                asChild
               >
-                ご予約・お問い合わせ
+                <Link href="/reserve">ご予約・お問い合わせ</Link>
               </Button>
               <Button
                 size="lg"
