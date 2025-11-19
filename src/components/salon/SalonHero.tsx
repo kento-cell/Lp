@@ -1,49 +1,122 @@
 import { ImageWithFallback } from "../figma/ImageWithFallback";
-import { Instagram } from "lucide-react";
 import { Button } from "../ui/button";
+import { Clock3, Instagram, ShieldCheck, Sparkles, Star } from "lucide-react";
+
+const stats = [
+  { label: "年間リピート", value: "92%" },
+  { label: "施術実績", value: "1,200+" },
+  { label: "ケアレシピ", value: "48" },
+];
 
 export function SalonHero() {
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center pt-16">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwc2Fsb24lMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjMzMTcyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="サロン内観"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/30" />
+    <section
+      id="hero"
+      className="relative overflow-hidden bg-neutral-950 text-white pt-28 pb-24"
+    >
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.08),_transparent_55%)]" />
+        <div className="absolute -top-24 right-16 size-72 bg-rose-500/30 blur-[140px]" />
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/60 to-transparent" />
       </div>
 
-      {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 text-center">
-        <h1 className="text-white mb-6 tracking-wider">
-          あなただけの<br className="md:hidden" />美しさを引き出す
-        </h1>
-        <p className="text-xl text-white/90 mb-8 tracking-wide max-w-2xl mx-auto">
-          中目黒の完全予約制プライベートサロン<br />
-          一人ひとりに寄り添った、丁寧な施術をお届けします
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button size="lg" className="bg-white text-neutral-900 hover:bg-neutral-100 min-w-[200px]">
-            ご予約・お問い合わせ
-          </Button>
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white hover:text-white/80 transition-colors"
-          >
-            <Instagram className="h-5 w-5" />
-            <span className="text-sm tracking-wide">Instagramで見る</span>
-          </a>
-        </div>
-      </div>
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-[minmax(0,1fr)_minmax(0,440px)] gap-12 items-center">
+          <div className="space-y-8">
+            <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/5 px-4 py-2 text-xs font-medium tracking-[0.35em] text-white/70">
+              <Sparkles className="size-4 text-rose-200" />
+              PRIVATE SALON
+            </p>
+            <div>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight tracking-widest">
+                中目黒で出会う
+                <span className="block font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-rose-100 to-white">
+                  あなたらしい艶と品
+                </span>
+              </h1>
+              <p className="mt-6 text-lg text-white/80 leading-relaxed">
+                完全予約制のプライベート空間で、髪質や骨格に合わせた丁寧なカウンセリングと施術を行います。
+                忙しい日常の合間に、呼吸が整うような贅沢なヘアケア体験を。
+              </p>
+            </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10">
-        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-3 bg-white/50 rounded-full animate-bounce" />
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                size="lg"
+                className="min-w-[220px] bg-white text-neutral-900 hover:bg-white/90 text-base font-semibold px-8 py-6 shadow-2xl shadow-rose-500/30"
+              >
+                ご予約・お問い合わせ
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="text-base border-white/40 text-white bg-transparent hover:bg-white/10 px-8 py-6"
+                asChild
+              >
+                <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                  <Instagram className="size-5" />
+                  Instagramで見る
+                </a>
+              </Button>
+            </div>
+
+            <div className="flex flex-col gap-6 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm sm:flex-row">
+              <div className="flex items-center gap-3">
+                <ShieldCheck className="size-10 text-rose-200" />
+                <div>
+                  <p className="text-sm text-white/60">完全貸切で安心</p>
+                  <p className="text-base font-medium">1日5名様限定</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-3">
+                <Clock3 className="size-10 text-rose-200" />
+                <div>
+                  <p className="text-sm text-white/60">ナイトケア対応</p>
+                  <p className="text-base font-medium">最終受付 21:00</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
+              {stats.map((stat) => (
+                <div key={stat.label}>
+                  <p className="text-3xl font-semibold tracking-tight">{stat.value}</p>
+                  <p className="mt-1 text-xs tracking-[0.3em] text-white/60">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -inset-6 rounded-[36px] bg-gradient-to-br from-white/20 via-rose-200/30 to-transparent opacity-70 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[32px] border border-white/15 bg-white/5">
+              <ImageWithFallback
+                src="https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwc2Fsb24lMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjMzMTcyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                alt="サロン内観"
+                className="h-full w-full object-cover"
+              />
+
+              <div className="absolute left-6 top-6 flex items-center gap-3 rounded-2xl bg-black/60 px-5 py-3 backdrop-blur">
+                <div className="flex items-center gap-1 text-amber-300">
+                  {[...Array(5)].map((_, index) => (
+                    <Star key={index} className="size-4 fill-current" />
+                  ))}
+                </div>
+                <div>
+                  <p className="text-sm font-semibold">4.9 / 5.0</p>
+                  <p className="text-xs text-white/70">ご来店のお客様レビュー</p>
+                </div>
+              </div>
+
+              <div className="absolute -bottom-6 right-6 w-64 rounded-3xl border border-white/10 bg-white/90 p-5 text-neutral-900 shadow-2xl">
+                <p className="text-xs tracking-[0.4em] text-neutral-500">CARE ROUTINE</p>
+                <p className="mt-3 text-lg font-semibold">髪質診断 × オーダーメイドケア</p>
+                <p className="mt-2 text-sm text-neutral-600">
+                  お持ち帰りいただけるセルフケアレシピで、サロン帰りの艶が長く続きます。
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
