@@ -7,9 +7,19 @@ export function SalonAccess() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16">
           {/* Map */}
           <div>
-            <div className="aspect-square bg-neutral-200 flex items-center justify-center">
-              <p className="text-neutral-500 text-sm">Google Map</p>
+            <div className="aspect-square rounded-[32px] overflow-hidden shadow-2xl border border-white/40">
+              <iframe
+                src="https://maps.google.com/maps?q=%E4%B8%AD%E7%9B%AE%E9%BB%92%E9%A7%85&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                className="w-full h-full"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="中目黒駅のGoogleマップ"
+                allowFullScreen
+              ></iframe>
             </div>
+            <p className="text-sm text-neutral-500 mt-3 text-center">
+              Google マップで「中目黒駅」を表示しています
+            </p>
           </div>
 
           {/* Info */}
