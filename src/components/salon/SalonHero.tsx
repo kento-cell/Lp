@@ -3,13 +3,6 @@ import Link from "next/link";
 
 import { ImageWithFallback } from "../figma/ImageWithFallback";
 import { Button } from "../ui/button";
-import { Clock3, Instagram, ShieldCheck, Sparkles, Star } from "lucide-react";
-
-const stats = [
-  { label: "年間リピート", value: "92%" },
-  { label: "施術実績", value: "1,200+" },
-  { label: "ケアレシピ", value: "48" },
-];
 
 const stats = [
   { label: "年間リピート", value: "92%" },
@@ -36,6 +29,7 @@ export function SalonHero() {
               <Sparkles className="size-4 text-rose-200" />
               PRIVATE SALON
             </p>
+
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight tracking-widest">
                 中目黒で出会う
@@ -49,26 +43,27 @@ export function SalonHero() {
               </p>
             </div>
 
+            {/* ▼ ボタンを修正 */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button
                 size="lg"
                 className="min-w-[220px] bg-white text-neutral-900 hover:bg-white/90 text-base font-semibold px-8 py-6 shadow-2xl shadow-rose-500/30"
-<<<<<<< ours
-              >
-                ご予約・お問い合わせ
-=======
                 asChild
               >
                 <Link href="/reserve">ご予約・お問い合わせ</Link>
->>>>>>> theirs
               </Button>
+
               <Button
                 size="lg"
                 variant="outline"
                 className="text-base border-white/40 text-white bg-transparent hover:bg-white/10 px-8 py-6"
                 asChild
               >
-                <a href="https://instagram.com" target="_blank" rel="noreferrer">
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Instagram className="size-5" />
                   Instagramで見る
                 </a>
@@ -95,8 +90,12 @@ export function SalonHero() {
             <div className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-3xl font-semibold tracking-tight">{stat.value}</p>
-                  <p className="mt-1 text-xs tracking-[0.3em] text-white/60">{stat.label}</p>
+                  <p className="text-3xl font-semibold tracking-tight">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-xs tracking-[0.3em] text-white/60">
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -119,13 +118,19 @@ export function SalonHero() {
                 </div>
                 <div>
                   <p className="text-sm font-semibold">4.9 / 5.0</p>
-                  <p className="text-xs text-white/70">ご来店のお客様レビュー</p>
+                  <p className="text-xs text-white/70">
+                    ご来店のお客様レビュー
+                  </p>
                 </div>
               </div>
 
               <div className="absolute -bottom-6 right-6 w-64 rounded-3xl border border-white/10 bg-white/90 p-5 text-neutral-900 shadow-2xl">
-                <p className="text-xs tracking-[0.4em] text-neutral-500">CARE ROUTINE</p>
-                <p className="mt-3 text-lg font-semibold">髪質診断 × オーダーメイドケア</p>
+                <p className="text-xs tracking-[0.4em] text-neutral-500">
+                  CARE ROUTINE
+                </p>
+                <p className="mt-3 text-lg font-semibold">
+                  髪質診断 × オーダーメイドケア
+                </p>
                 <p className="mt-2 text-sm text-neutral-600">
                   お持ち帰りいただけるセルフケアレシピで、サロン帰りの艶が長く続きます。
                 </p>
