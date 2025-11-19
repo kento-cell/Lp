@@ -1,4 +1,4 @@
-import { Clock3, Instagram, ShieldCheck, Sparkles, Star } from "lucide-react";
+import { Clock3, Instagram, ShieldCheck, Sparkles, Star, User2 } from "lucide-react";
 import Link from "next/link";
 
 import { ImageWithFallback } from "../figma/ImageWithFallback";
@@ -9,6 +9,12 @@ const stats = [
   { label: "施術実績", value: "1,200+" },
   { label: "ケアレシピ", value: "48" },
 ];
+
+const persona = {
+  name: "Kana",
+  detail: "32歳 / PRディレクター",
+  needs: "忙しくても清潔感と艶を保ちたい",
+};
 
 export function SalonHero() {
   return (
@@ -31,14 +37,15 @@ export function SalonHero() {
             </p>
             <div>
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-light leading-tight tracking-widest">
-                中目黒で出会う
+                女性の輪郭を美しく整える
                 <span className="block font-semibold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white via-rose-100 to-white">
-                  あなたらしい艶と品
+                  中目黒プライベートサロン
                 </span>
               </h1>
               <p className="mt-6 text-lg text-white/80 leading-relaxed">
-                完全予約制のプライベート空間で、髪質や骨格に合わせた丁寧なカウンセリングと施術を行います。
-                忙しい日常の合間に、呼吸が整うような贅沢なヘアケア体験を。
+                仕事もプライベートも多忙な女性のために設計された、完全貸切のヘアケアルーム。
+                骨格診断とヘルスチェックをもとに「艶」「品」「柔らかさ」を引き出す独自メソッドで、
+                翌朝のスタイリングまで安心してお任せいただけます。
               </p>
             </div>
 
@@ -94,8 +101,8 @@ export function SalonHero() {
             <div className="absolute -inset-6 rounded-[36px] bg-gradient-to-br from-white/20 via-rose-200/30 to-transparent opacity-70 blur-3xl" />
             <div className="relative overflow-hidden rounded-[32px] border border-white/15 bg-white/5">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1619607146034-5a05296c8f9a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwc2Fsb24lMjBpbnRlcmlvcnxlbnwxfHx8fDE3NjMzMTcyMTZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="サロン内観"
+                src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1080&q=80"
+                alt="サロンでケアを受ける女性"
                 className="h-full w-full object-cover"
               />
 
@@ -111,11 +118,23 @@ export function SalonHero() {
                 </div>
               </div>
 
-              <div className="absolute -bottom-6 right-6 w-64 rounded-3xl border border-white/10 bg-white/90 p-5 text-neutral-900 shadow-2xl">
+              <div className="absolute -bottom-6 right-6 w-64 rounded-3xl border border-white/10 bg-white/90 p-5 text-neutral-900 shadow-2xl space-y-3">
                 <p className="text-xs tracking-[0.4em] text-neutral-500">CARE ROUTINE</p>
                 <p className="mt-3 text-lg font-semibold">髪質診断 × オーダーメイドケア</p>
                 <p className="mt-2 text-sm text-neutral-600">
                   お持ち帰りいただけるセルフケアレシピで、サロン帰りの艶が長く続きます。
+                </p>
+                <div className="flex items-center gap-3 rounded-2xl border border-neutral-200/80 bg-white px-3 py-2">
+                  <div className="flex size-10 items-center justify-center rounded-full bg-rose-50">
+                    <User2 className="size-5 text-rose-400" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold">{persona.name}</p>
+                    <p className="text-xs text-neutral-500">{persona.detail}</p>
+                  </div>
+                </div>
+                <p className="text-xs text-neutral-500">
+                  「{persona.needs}」
                 </p>
               </div>
             </div>
