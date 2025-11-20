@@ -1,6 +1,6 @@
 "use client";
 
-export function SalonAccess() {
+export default function SalonAccess() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h2 className="text-sm tracking-[0.3em] text-neutral-500 uppercase mb-2">
@@ -9,19 +9,18 @@ export function SalonAccess() {
       <h3 className="text-2xl font-semibold mb-10">サロン情報</h3>
 
       <div className="grid md:grid-cols-2 gap-12">
-        {/* 左：Google Map */}
         <div className="w-full h-[380px] rounded-xl overflow-hidden border">
           <iframe
-            src="https://www.google.com/maps/embed?pb=あなたの埋め込みURL"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.370579862605!2d139.6949555!3d35.6437025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b414715be8f%3A0xb76c2f0cba7d685b!2z5pel5pys44CB44CSMTUzLTAwNTEg5p2x5Lqs6YO95LiW55Sw6LC35Yy65LiA5bqr77yS5LiB55uu77yR77yR!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
             width="100%"
             height="100%"
-            loading="lazy"
             style={{ border: 0 }}
             allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
           />
         </div>
 
-        {/* 右：テキスト情報 */}
         <div className="space-y-6 text-sm leading-relaxed">
           <div>
             <p className="text-neutral-500">住所</p>
