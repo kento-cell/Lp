@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 export default function SalonAccess() {
   return (
@@ -6,15 +6,16 @@ export default function SalonAccess() {
       <h2 className="text-sm tracking-[0.3em] text-neutral-500 uppercase mb-2">
         ACCESS
       </h2>
-      <h3 className="text-2xl font-semibold mb-10">サロン情報</h3>
+      <h3 className="text-2xl font-semibold mb-10">サロン概要</h3>
 
       <div className="grid md:grid-cols-2 gap-12">
         <div className="w-full h-[380px] rounded-xl overflow-hidden border">
           <iframe
+            title="サロン所在地の地図"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.370579862605!2d139.6949555!3d35.6437025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b414715be8f%3A0xb76c2f0cba7d685b!2z5pel5pys44CB44CSMTUzLTAwNTEg5p2x5Lqs6YO95LiW55Sw6LC35Yy65LiA5bqr77yS5LiB55uu77yR77yR!5e0!3m2!1sja!2sjp!4v1700000000000!5m2!1sja!2sjp"
             width="100%"
             height="100%"
-            style={{ border: 0 }}
+            className="border-0"
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -27,7 +28,7 @@ export default function SalonAccess() {
             <p className="mt-1">
               〒153-0051
               <br />
-              東京都目黒区上目黒3-1-1
+              東京都目黒区上目黒1-1-1
               <br />
               中目黒ビル 2F
             </p>
@@ -67,7 +68,7 @@ export default function SalonAccess() {
       <p className="mt-10 text-xs text-neutral-500">
         ※駐車場はございません。お近くのコインパーキングをご利用ください。
         <br />
-        ※完全予約制のため、ご来店の際は必ず事前にご予約をお願いいたします。
+        ※完全予約制のため、ご来店の際は事前にご予約をお願いいたします。
       </p>
     </section>
   );

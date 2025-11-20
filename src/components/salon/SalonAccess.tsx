@@ -1,4 +1,4 @@
-import { MapPin, Clock, Phone, Mail } from "lucide-react";
+﻿import { MapPin, Clock, Phone, Mail } from "lucide-react";
 
 export function SalonAccess() {
   return (
@@ -15,7 +15,7 @@ export function SalonAccess() {
           {/* Info */}
           <div>
             <p className="text-sm tracking-widest text-neutral-500 mb-4">ACCESS</p>
-            <h2 className="mb-8 tracking-wide">サロン情報</h2>
+            <h2 className="mb-8 tracking-wide">サロン概要</h2>
 
             <div className="space-y-6">
               <div className="flex gap-4">
@@ -24,7 +24,7 @@ export function SalonAccess() {
                   <p className="text-sm text-neutral-500 mb-1">住所</p>
                   <p className="text-neutral-900">
                     〒153-0051<br />
-                    東京都目黒区上目黒3-1-1<br />
+                    東京都目黒区上目黒1-1-1<br />
                     中目黒ビル 2F
                   </p>
                   <p className="text-sm text-neutral-600 mt-2">
@@ -71,8 +71,9 @@ export function SalonAccess() {
 
             <div className="mt-8 pt-8 border-t border-neutral-200">
               <p className="text-sm text-neutral-600 leading-relaxed">
-                ※駐車場はございません。お近くのコインパーキングをご利用ください。<br />
-                ※完全予約制のため、ご来店の際は必ずご予約をお願いいたします。
+                ※駐車場はございません。お近くのコインパーキングをご利用ください。
+                <br />
+                ※完全予約制のため、ご来店の際は事前にご予約をお願いいたします。
               </p>
             </div>
           </div>
