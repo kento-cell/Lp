@@ -1,3 +1,10 @@
 node_modules
 .next
 out
+
+# Binaries / secrets (added 2026-05-29 audit)
+*.exe
+.env
+.env.local
+*.pem
+*.key
