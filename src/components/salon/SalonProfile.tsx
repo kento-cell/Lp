@@ -10,7 +10,7 @@ export function SalonProfile() {
             <div className="aspect-[3/4] relative overflow-hidden">
               <ImageWithFallback
                 src="https://images.unsplash.com/photo-1761931403663-050fbd8fb4c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBoYWlyJTIwc3R5bGlzdHxlbnwxfHx8fDE3NjM0MzIxOTB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="オーナー 山本彩花"
+                alt="オーナー（サンプル）"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -19,8 +19,8 @@ export function SalonProfile() {
           {/* Content */}
           <div>
             <p className="text-sm tracking-widest text-neutral-500 mb-4">PROFILE</p>
-            <h2 className="mb-6 tracking-wide">山本 彩花</h2>
-            <p className="text-sm text-neutral-600 mb-8">Ayaka Yamamoto / Owner & Hair Stylist</p>
+            <h2 className="mb-6 tracking-wide">サンプル 太郎</h2>
+            <p className="text-sm text-neutral-600 mb-8">Sample Owner / Hair Stylist</p>
             
             <div className="space-y-6 text-neutral-700 leading-relaxed">
               <p>

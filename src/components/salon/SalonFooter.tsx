@@ -8,7 +8,7 @@ export function SalonFooter() {
           <div className="text-center md:text-left">
             <p className="tracking-wider mb-2">AYAKA SALON</p>
             <p className="text-sm text-neutral-600">
-              〒153-0051 東京都目黒区上目黒3-1-1 中目黒ビル 2F
+              〒000-0000 ○○県○○市○○町0-0-0 中目黒ビル 2F
             </p>
           </div>
 

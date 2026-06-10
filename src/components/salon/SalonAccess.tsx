@@ -23,8 +23,8 @@ export function SalonAccess() {
                 <div>
                   <p className="text-sm text-neutral-500 mb-1">住所</p>
                   <p className="text-neutral-900">
-                    〒153-0051<br />
-                    東京都目黒区上目黒1-1-1<br />
+                    〒000-0000<br />
+                    ○○県○○市○○町0-0-0<br />
                     中目黒ビル 2F
                   </p>
                   <p className="text-sm text-neutral-600 mt-2">
@@ -50,7 +50,7 @@ export function SalonAccess() {
                 <Phone className="h-5 w-5 text-neutral-500 flex-shrink-0 mt-1" />
                 <div>
                   <p className="text-sm text-neutral-500 mb-1">電話</p>
-                  <p className="text-neutral-900">03-1234-5678</p>
+                  <p className="text-neutral-900">000-0000-0000</p>
                   <p className="text-sm text-neutral-600 mt-2">
                     ※施術中は電話に出られない場合がございます
                   </p>
